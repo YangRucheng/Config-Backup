@@ -45,9 +45,9 @@ default() {
 
 ali;
 prompt;
-exports;
+# exports;
 default;
-set_bin;
+# set_bin;
 
 
 echo -ne "Hi, Sakana! 今天是 "; date '+%A, %B %-d %Y'
