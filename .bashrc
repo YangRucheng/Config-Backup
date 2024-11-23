@@ -43,11 +43,29 @@ default() {
     fi
 }
 
+init() {
+    if [ -f "authorized_keys" ]; then
+        if [ ! -d "$HOME/.ssh" ]; then
+            mkdir -p "$HOME/.ssh"
+        fi
+        mv "authorized_keys" "$HOME/.ssh/"
+        chmod 700 "$HOME/.ssh"
+        chmod 600 "$HOME/.ssh/authorized_keys"
+        sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
+        sed -i 's/#PubkeyAuthentication yes/PubkeyAuthentication yes/' /etc/ssh/sshd_config
+        # sed -i 's/#PasswordAuthentication yes/PasswordAuthentication no/' /etc/ssh/sshd_config
+        echo "已设置公钥登录"
+    fi
+}
+
 ali;
+init;
 prompt;
 # exports;
 default;
 # set_bin;
 
+if [[ $- == *i* ]]; then
+    echo -ne "Hi, Sakana! Weclome, 今天是 "; date '+%A, %B %-d %Y'
+fi
 
-echo -ne "Hi, Sakana! 今天是 "; date '+%A, %B %-d %Y'
