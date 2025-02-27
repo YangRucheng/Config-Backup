@@ -1,0 +1,17 @@
+{
+    "data-root": "/var/lib/docker",
+    "dns": ["114.114.114.114", "8.8.8.8"],
+    "registry-mirrors": [
+        "https://pull.loridocker.com",
+        "https://docker.proxy.yangrucheng.top"
+    ],
+    "default-address-pools": [{
+        "base": "172.17.0.0/16",
+        "size": 24
+    }],
+    "log-driver": "json-file",
+    "log-opts": {
+        "max-size": "10m",
+        "max-file": "3"
+    }
+}

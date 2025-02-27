@@ -19,12 +19,13 @@ prompt() {
 }
 
 set_bin() {
-    export PATH="$PATH:/usr/local/go/bin"
-    export PATH="$PATH:/usr/local/node/bin"
+    # export PATH="$PATH:/usr/local/go/bin"
+    # export PATH="$PATH:/usr/local/node/bin"
+    export PATH="$PATH:/usr/local/bin"
 }
 
 exports() {
-    export all_proxy=http://127.0.0.1:520
+    export all_proxy=http://127.0.0.1:7890
     export http_proxy=$all_proxy
     export https_proxy=$all_proxy
 }
@@ -46,7 +47,7 @@ ali;
 prompt;
 # exports;
 default;
-# set_bin;
+set_bin;
 
 if [[ $- == *i* ]]; then
     echo -ne "Hi, Sakana! Weclome, 今天是 "; date '+%A, %B %-d %Y'
