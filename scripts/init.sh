@@ -1,7 +1,7 @@
 #! /bin/bash
 
-HOST="https://jsdelivr.proxy.yangrucheng.top"
-# HOST="https://cdn.jsdelivr.net"
+HOST="jsdelivr.proxy.yangrucheng.top"
+# HOST="cdn.jsdelivr.net"
 
 URL="https://$HOST/gh/YangRucheng/Config-Backup@main/resource"
 
