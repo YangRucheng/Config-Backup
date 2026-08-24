@@ -12,7 +12,7 @@ TARGET="/usr/bin/cloudflared"
 UPDATE_UNITS=("cloudflared-update.service" "cloudflared-update.timer")
 SERVICE_UNITS=("cloudflared@quic.service" "cloudflared@http2.service")
 SERVICE_UNIT_DIR="${SERVICE_UNIT_DIR:-/etc/systemd/system}"
-SERVICE_TEMPLATE_URL_BASE="${SERVICE_TEMPLATE_URL_BASE:-https://gitee.com/YangRucheng/Config-Backup/raw/main/resource/cloudflared}"
+SERVICE_TEMPLATE_URL_BASE="${SERVICE_TEMPLATE_URL_BASE:-https://proxy.19890605.xyz/raw.githubusercontent.com/YangRucheng/Config-Backup/refs/heads/main/resource/cloudflared}"
 TOKEN_PLACEHOLDER="__CLOUDFLARED_TOKEN__"
 
 log_step() {

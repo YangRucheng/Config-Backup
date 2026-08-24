@@ -1,7 +1,7 @@
 #! /bin/bash
 set -euo pipefail
 
-URL="https://gitee.com/YangRucheng/Config-Backup/raw/main/resource"
+URL="https://proxy.19890605.xyz/raw.githubusercontent.com/YangRucheng/Config-Backup/refs/heads/main/resource"
 
 # 静默下载：-q 关闭进度条、网络重定向等冗余输出，只保留错误信息
 fetch() {
